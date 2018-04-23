@@ -1,4 +1,3 @@
-﻿
 body {
   background: #2ecc71; /* fallback for old browsers */
   background: -webkit-linear-gradient(right, #1E8BC3, #1E8BC3);
@@ -9,20 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
   font-family: "overpass";
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 0%;
 }
-input{
 
-height:3em;
-border: 2px solid white;
-border-radius:1px;
-background: transparent;
-color: #fff;
-font-family: "overpass";
-width: 100%;
-
+.jumbo{
+height:100vh;
 
 }
 
@@ -30,55 +19,52 @@ h1, h2, h3 {
   color: #fff;
   font-family: "overpass";
 }
-
-button
-{
-width:100%;
-height:3.5em;
-color:white;
-background:#c3551e;
-border-style:solid;
-border-color:#c3551e;
-border-width:1px;
-font-weight: bold;
-
-
-
-}
-button:hover
-{
-background:#c46b2f;
-border-color:#c46b2f;
+ul li:not(.nav-item){
+  display:inline-block;
+  clear: both;
+  padding: 20px;
+  border-radius: 30px;
+  margin-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 .user
 {
-content: "Você disse: ";
+float:right;
+background: #0084ff;
+color: #fff;
+
 text-align: center;
 
 }
 .ali
 {
-content: "Você disse: ";
+  background: #eee;
+  float: left;
 text-align: center;
 
 }
-
+.ali + .user{
+  border-bottom-right-radius: 5px;
+}
+.user + .user{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.user:last-of-type{
+  border-bottom-right-radius: 30px;
+}
 .user::before
 {
-  content: "Você disse: ";
+
     color: #391ec3;
     font-family: "overpass";
 
 }
-div.data ul li.user {
-    background-color: #3c85aa;
-}
-div.data ul li.ali {
 
-}
+
 .ali::before
 {
-  content: "Ali disse: ";
+
   margin-top: 3px;
   margin-bottom: 3px;
 
@@ -86,29 +72,3 @@ div.data ul li.ali {
     font-family: "overpass";
 }
 ul{ list-style: none; padding:0;  margin:0;  }
-
-#chat_box
-{
-width:100%;
-
-}
-
-#falar_entrada
-{
-
-  margin-top: 3px;
-  margin-bottom: 8px;
-}
-
-.outerContainer {
-    display: table;
-    width: 100%; /* width of parent */
-    height:2px;
-    overflow: hidden;
-}
-.outerContainer .innerContainer {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    margin: 0 auto;
-}

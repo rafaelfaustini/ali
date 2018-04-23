@@ -15,10 +15,7 @@ function setupVoices(){
 
 function setup()
 {
-
-
-
-  noCanvas();
+noCanvas();
 let bot = new RiveScript({utf8: true});
 bot.loadFile("bot.rive", bReady,bError);
 
@@ -33,13 +30,13 @@ window.setInterval(function() {
 
 function bReady()
 {
-  console.log('Bot Ready');
+  console.log('Ali Iniciada');
   bot.sortReplies();
 }
 
 function bError()
 {
-  console.log('Bot Error');
+  console.log('Erro ao iniciar Ali');
 }
 
 
@@ -58,7 +55,12 @@ $("#falar_entrada").keyup(function(event) {
 function chat()
 {
 
-  if (Date.now() - last_clicked < 1000) return;
+  if (Date.now() - last_clicked < 1000){
+    button.class('btn btn-danger btn-lg btn-xl text-uppercase disabled');
+    button.class('btn btn-danger btn-lg btn-xl text-uppercase');
+
+    return;
+  }
   last_clicked = Date.now();
 
 

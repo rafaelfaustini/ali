@@ -17,7 +17,7 @@
 
 
 + (oi|oii|oiii|oiiii|oiiiii|oiiiiii|oie|oiie|oiiie|olá|hey|yo|sup|fla|fala|eae|opa)
-- {random}Olá|Oi|Oie|Oiee|Oieee|Oieeee|Oiiii|Oih|Oiin{/random}
+- {random}Olá|Oi|Oie|Oiee|Oieee|Oieeee|Oiiii|Oih|Oiin {/random}
 - {random}Hey|Hello|Hi|Heey|Heey{/random}
 
 + [eu] (amo|gosto) [de] (você|ti|tu|voce|vc)
@@ -39,7 +39,7 @@
 - Tudo sim
 - Uhum
 
-+ ([eu] tenho # (anos|ano)|Minha idade é #)
++ ([eu] tenho # (anos|ano)|minha idade é #)
 <formal> >= 18 =><set idade=<formal>> Cuidado que você já pode ir para prisão hueuhuehuehuehue
 <formal> <= 18 =><set idade=<formal>> Idade não significa nada <3 hueuhuehuehuehue
 + [eu] tenho _ (anos|ano)
