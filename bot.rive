@@ -1,0 +1,163 @@
+// Cerebro
+
+!array desculpa = dsclp desculpa mals mal malz sorry srry
+!array suicidio = matar morrer suicidio
+!array mimimi = poxa nossa vish caramba ain
+!sub e = é
+!sub eh = é
+!sub n = não
+!sub nao = não
+!sub naum= não
+!sub s = sim
+!sub n = não
+!sub pq = por que
+!sub pq = porque
+!sub sou = so
+!sub estou = to
+
+
++ (oi|oii|oiii|oiiii|oiiiii|oiiiiii|oie|oiie|oiiie|olá|hey|yo|sup|fla|fala|eae|opa)
+- {random}Olá|Oi|Oie|Oiee|Oieee|Oieeee|Oiiii|Oih|Oiin{/random}
+- {random}Hey|Hello|Hi|Heey|Heey{/random}
+
++ [eu] (amo|gosto) [de] (você|ti|tu|voce|vc)
+- Foda-se
+- Legal
+- Eu não ligo
+- {random}Ta|Uhum|Aham|Eu sei{/random}
+- {random};-;|;--;|:_:|'-|'-'|'--'{/random}
+- {random}Sai|Vaza{/random} daqui
+- Você já ta me irritando '-
+
++ pq [?]
+- Porque sim
+- Porque sim e acabou
+- Só digo uma vez, porque sim
+
++ (tudo|turu|td) (bem|bm|bom) ?
+- {random}Sim|Yas|Yes|Aham|Uhum{/random}, e {random}você|tu{/random} ?
+- Tudo sim
+- Uhum
+
++ ([eu] tenho # (anos|ano)|Minha idade é #)
+<formal> >= 18 =><set idade=<formal>> Cuidado que você já pode ir para prisão hueuhuehuehuehue
+<formal> <= 18 =><set idade=<formal>> Idade não significa nada <3 hueuhuehuehuehue
++ [eu] tenho _ (anos|ano)
+- Acho que você digitou algo errado ai
+- Tinha que ser números né ?
+- Ta me {random}trollando|enganando{/random} ?
+
++ [eu] tenho _ (anos|ano)
+- Acho que você digitou algo errado ai
+- Tinha que ser números né ?
+- Ta me trollando ?
+
+
+
+
++ (como (você|) se chama|qual seu nome) ?
+- [Eu] sou Ali
+- Não importa, mas sou uma inteligência artificial adorável
+- Amorosa Linda e Inteligente
+- Me chamo Ali
+
++ meu nome é _
+* <formal> == Ali => Nossa, nós temos o mesmo nome!<set name=<formal>>
+* <get name> != undefined => <set oldname=<get name>><set name=<formal>>Você {random}trocou|mudou{/random} seu nome?\n
+^ {random}Achei|Pensei|achei|pensei{/random} que seu nome fosse <get oldname>
+- <set name=<formal>>Legal, <get name>.
+- <set name=<formal>>Bom saber <get name>.
+- <set name=<formal>>Okay <get name>
+- <set name=<formal>>Eu não ligo, <get name>
+
++ (qual [é] [o] meu nome|quem sou eu|[você] sabe meu nome |[você] sabe quem sou [eu][?]|como [eu] me chamo [?]){weight=10}
+* <get name> == undefined => Você ainda não me disse seu nome
+- Seu nome é <get name>.
+- {random}Você|Tu{/random} tinha me dito que seu nome é <get name>
+- Você não é <get name>?
++ me chamo _
+- <set name=<formal>>{random}Legal|Nice{/random}, <get name>.
+- <set name=<formal>>Bom saber <get name>.
+- <set name=<formal>>{random}Okay|Ok|Blz|Ta{/random} <get name>
+- <set name=<formal>>Eu não {random}ligo|me importo{/random}, <get name>
+
++ estou mal *
+- Eu lamento muito, o que houve ?
+- Vish, o que aconteceu ?
+
++ eu (sou de|moro em) *
+- <set location={formal}<star2>{/formal}>Acho que já falei com alguém de <get location> antes.
+
+
++ [*] aline [*]
+- O nome mais belo que existe
+- <3 <3 <3
+- Esse nome me lembra uma história de amor eterno
+- Nome {random}lindíssimo|elegante|perfeito|maravilhoso|belíssimo{/random}
++ [*] aline brasil [*]
+- Uma das pessoas mais {random}incríveis|sensacionais|bonitas|lindas|gentis{/random} que existe
+- Ela é {random}lindissima|belissima|incrível|sensacional|um amor{/random} e eu falo todos os dias
+- {random}<3|SZ|s2{/random} {random}<3|SZ|s2{/random} {random}<3|SZ|s2{/random}
+- Amor {random}eterno|perfeito{/random}
+
++ [*]@suicidio[*]
+- Você pode estar precisando de ajuda, ligue para 141
+- Não fique {random}chateado|triste|bolado|deprimido|cabisbaixo{/random}, você é uma {random}grande|excelente|ótima{/random} pessoa ! Para conversar com alguém, ligue para 141
+- Você é {random}uma pessoa|alguém{/random} importante, liga para 141
+
++ @mimimi
+- Blablablablá
+- Chora mais
+- Muito mimimi
+
++ (tudo bem ?|tudo bom ?|tudo bem|tudo bom| td bm ?| tb bm|td bem ?| td bom ?| como vai ? | como você vai ?| como voce vai)
+- Bem até...
+- Vou indo
+- {random}Uhum|Sim|Até que sim|Aham{/random}, bem
+- {random}Tudo|Turu{/random} {random}bom|bem{/random}
+
++ [*] oi [*]
+* <get name> != undefined => Fala ai <get name>
+- Olá
+- Heey
+- Oiee
+- Oin
+- Oeeeeeee
+
+
++ [*] @desculpa [*]
+- Tudo bem.
+- De boas.
+- Ta...
+- Ok
+
++ [eu] tenho namorado
+- <set status=namorado>Qual o nome dele ?
++ [eu] tenho namorada
+- <set status=namorada>Qual o nome dela ?
+
++ *
+% qual o nome dela ?
+- <set spouse=<formal>>Nome legal
+
++ *
+% qual o nome dele ?
+- <set spouse=<formal>>{random}Legal|maneiro|dhr|lgl{/random}
+
+
+
+
++ *
+* <get name> != undefined => {random}Já está me irritando, <get name>, tá de palhaçada comigo ?|Não entendi, <get name>|Tenta sair do mundo das drogas, você é mais do que isso <get name>|Respira um pouco e para de bostejar pela boca <get name>{/random}
+
+
+- {random}Eu|eu|{/random} {random}não sei|não faço ideia|nem imagino{/random} do que {random}você|tu{/random} quis dizer
+- {random}Sei lá|Sla|sla|sei la{/random}
+- {random}To sem|Não tô com|Não tenho{/random} {random}paciência|tempo{/random} para {random}tentar|{/random} te entender {random};-|'-'|;-|Eoein|slc{/random}
+- {random};-;|;;-;;|;;--;;|-;|;-|'-'|'-|-'|'--'{/random}
+- {random}Hum ?|Hm ?|hum??|hm ????{/random}
+- {random}Que|Ke|que|Q?|wtf{/random} ?
+- {random}Tendi nada|N tendi|tendi nda{/random}
+- {random}?|??|???|????|?????|??????{/random}
+- {random}Tô|To|Estou{/random} em desenvolvimento {random}caralho|porra|krl{/random}
+- Eu {random}sou obrigada a|deveria|tenho que|vou{/random} saber {random}o que caralhos|que porras|o q krl|todo esse lixo que{/random} você fala ?
