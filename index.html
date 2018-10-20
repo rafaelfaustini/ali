@@ -1,87 +1,75 @@
-<html>
-<head>
-  <title>Ali Bot</title>
-  <link rel="shortcut icon" href="favicon.ico" />
-<meta charset="utf-8"/>
-<meta name="description" content="Ali é um robo inteligente em construção, por Rafael Faustini">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://unpkg.com/rivescript@1.17.2/dist/rivescript.js"></script>
-<script src="p5/p5.js"></script>
-<script src="p5/p5.dom.js"></script>
-<script src="p5/p5.sound.js"></script>
-<script src="p5/p5.speech.js"></script>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
-
 <body>
+  <!-- As a link -->
+  <nav class="navbar navbar-light bg-light danger-color fixed-top" id="topnavbar">
+    <a class="navbar-brand text-white" href="#">Ali Chatbot</a>
+  </nav>
+    <!-- Start your project here-->
+    <div class="container-fluid">
+<ul class="mb-2" id="chat_box">
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <img src="panda.png" width="40" height="40" class="d-inline-block align-top" style="margin-right:1%" alt=""/>
-        <a class="navbar-brand" href="#">Ali ChatBot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Alguns recursos ainda estão em construção ">Sobre</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link disabled" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Alguns recursos ainda estão em construção " href="#">Contato</a>
-            </li>
-          </ul>
-
-<!-- Direta da Barra -->
-        </div>
-      </nav>
-</nav>
-<header class="masthead">
-<div class="jumbo jumbotron-fluid d-flex align-items-center">
-<div class="container-fluid">
-
-
-
-<div id="data" class="card mx-auto pre-scrollable" style="height:60%">
-<div class="card-body">
-<ul id="chat_box">
 </ul>
-</div>
-</div>
-<div class="row h-10 justify-content-center align-items-center ">
-<div class="form-group col-lg-12">
-<input id="falar_entrada" type="text" class="form-control"></input>
-</div>
-</div>
-<div class="row h-5 justify-content-center align-items-center">
-<button id="submit" class="btn btn-danger btn-lg btn-xl text-uppercase">Enviar </button>
-</div>
+    <div class="card fixed-bottom danger-color" id="footer">
+        <div class="input-group-lg">
+        <span class="input-group-btn">
+        <input id="falar_entrada" type="text" class="form-control input text-white mx-2" placeholder="Digite aqui..."></input>
+          <button class="btn btn-default btn-sm " id="submit" type="submit">
+            <i style="font-size: 1.5rem;" class="fa fa-location-arrow"></i>
+          </button>
 
+        </span>
 
-<p hidden>
-   Resposta: <span id="saida">
-</p>
-</div>
-</div>
-</header>
+      </div>
+
+    </div>
+  </div>
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
+    <script src="p5/p5.speech.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rivescript/1.19.0/rivescript.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document.body).css('padding-top', $('#topnavbar').height() + 20);
+            $(document.body).css('padding-bottom', $('#footer').height() + 20);
+            $(window).resize(function(){
+                $(document.body).css('padding-top', $('#topnavbar').height() + 20);
+                $(document.body).css('padding-bottom', ( $('#footer').height()+ ($('.message:last').offset().top - $('.message:first').offset().top) ) + $('#topnavbar').height() + 35);
+            });
+        });
+    </script>
 </body>
 
-<script>
-$(document).ready(function(){
-  $('[data-toggle="popover"]').popover();
-});
-</script>
 </html>

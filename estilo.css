@@ -1,0 +1,12 @@
+.form-control::placeholder { color: white;}
+
+#chat-box {
+    overflow: scroll;
+}
+
+@media (min-width: 980px) {
+  body {
+    padding-top: 60px;
+    padding-bottom: 42px;
+  }
+}

@@ -4,6 +4,7 @@ var last_clicked = 0;
 
 
 
+
 let voz= new p5.Speech();
 function setupVoices(){
   let voices = voz.voices;
@@ -19,10 +20,6 @@ noCanvas();
 let bot = new RiveScript({utf8: true});
 bot.loadFile("bot.rive", bReady,bError);
 
-window.setInterval(function() {
-  var elem = document.getElementById('data');
-  elem.scrollTop = elem.scrollHeight;
-}, 5000);
 
 
 
@@ -42,7 +39,6 @@ function bError()
 
 let button = select('#submit');
 let fala = select('#falar_entrada');
-let saida = select('#saida');
 
 button.mousePressed(chat);
 $("#falar_entrada").keyup(function(event) {
@@ -55,9 +51,9 @@ $("#falar_entrada").keyup(function(event) {
 function chat()
 {
 
-  if (Date.now() - last_clicked < 1000){
+  if (Date.now() - last_clicked < 800){
     button.class('btn btn-danger btn-lg btn-xl text-uppercase disabled');
-    button.class('btn btn-danger btn-lg btn-xl text-uppercase');
+    button.class('btn btn-default btn-lg btn-xl text-uppercase');
 
     return;
   }
@@ -67,20 +63,22 @@ function chat()
   let input = fala.value();
   document.getElementById("falar_entrada").value = "";
   if (input == "") return;
-  let x = document.createElement("LI");
+  let x = document.createElement("div");
   let t = document.createTextNode(input);
-  x.className = 'user';
+  x.className = 'user message float-right';
   x.appendChild(t);
   document.getElementById("chat_box").appendChild(x);
   let reply = bot.reply("local-user", input);
-  saida.html(reply);
-
-  let x2 = document.createElement("LI");
+  let x2 = document.createElement("div");
   let t2 = document.createTextNode(reply);
-  x2.className ='ali';
+  x2.className ='ali message float-left';
   x2.appendChild(t2);
   document.getElementById("chat_box").appendChild(x2);
   setupVoices();
+
+  $(document.body).css('padding-top', $('#topnavbar').height() + 20);
+  $(document.body).css('padding-bottom', ( $('#footer').height()+ ($('.message:last').offset().top - $('.message:first').offset().top) ) + $('#topnavbar').height() + 35);
+
   voz.speak(reply);
 }
 }

@@ -138,26 +138,26 @@
 
 + *
 % qual o nome dela ?
-- <set spouse=<formal>>Nome legal
+- <set spouse=<formal>>{random}Nome legal|Um bom nome|Interessante|Bom para você{/random}
 
 + *
 % qual o nome dele ?
-- <set spouse=<formal>>{random}Legal|maneiro|dhr|lgl{/random}
+- <set spouse=<formal>>{random}Legal|Show|Interessante|Bom nome|Nada de mais|maneiro|dhr|lgl{/random}
 
 
 
 
 + *
-* <get name> != undefined => {random}Já está me irritando, <get name>, tá de palhaçada comigo ?|Não entendi, <get name>|Tenta sair do mundo das drogas, você é mais do que isso <get name>|Respira um pouco e para de bostejar pela boca <get name>{/random}
+* <get name> != undefined => {random}Já está me irritando, <get name>, tá de palhaçada comigo ?|Não entendi, <get name>|Tenta sair do mundo das drogas, você é mais do que isso <get name>|Respira um pouco e para de bostejar pela boca <get name>|Aproveita e fica quieto, <get name>|Realmente não entendi, <get name>{/random}
 
-
-- {random}Eu|eu|{/random} {random}não sei|não faço ideia|nem imagino{/random} do que {random}você|tu{/random} quis dizer
+- {random}Ultimamente|Recentemente|Nos ultimos dias|Há pouco{/random}
+- {random}Eu|eu|{/random} {random}não sei|não faço ideia|nem imagino{/random} o quê {random}você|tu{/random} quis dizer
 - {random}Sei lá|Sla|sla|sei la{/random}
 - {random}To sem|Não tô com|Não tenho{/random} {random}paciência|tempo{/random} para {random}tentar|{/random} te entender {random};-|'-'|;-|Eoein|slc{/random}
 - {random};-;|;;-;;|;;--;;|-;|;-|'-'|'-|-'|'--'{/random}
 - {random}Hum ?|Hm ?|hum??|hm ????{/random}
-- {random}Que|Ke|que|Q?|wtf{/random} ?
+- {random}Que|Ke|que|Q?|Masoq{/random} ?
 - {random}Tendi nada|N tendi|tendi nda{/random}
 - {random}?|??|???|????|?????|??????{/random}
 - {random}Tô|To|Estou{/random} em desenvolvimento {random}caralho|porra|krl{/random}
-- Eu {random}sou obrigada a|deveria|tenho que|vou{/random} saber {random}o que caralhos|que porras|o q krl|todo esse lixo que{/random} você fala ?
+- Eu {random}sou obrigada a|deveria|tenho que|vou{/random} saber {random}o que caralhos|que porras|o q krl|todo esse lixo que|tudo|o que{/random} você fala ?
