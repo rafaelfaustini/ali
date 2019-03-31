@@ -6,6 +6,10 @@ Ali is a simple chatbot being developed using javascript and rivescript
 
 You can test Ali Chatbot at this url: http://rafaelfaustini.com.br/ali.
 
+## Uses
+
+* [Rivescript](https://www.rivescript.com)
+
 ## Contributors
 
 Feel free to contribute to the project and make Ali smarter.
