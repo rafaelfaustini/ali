@@ -9,6 +9,7 @@ You can test Ali Chatbot at this url: http://rafaelfaustini.com.br/ali.
 ## Uses
 
 * [Rivescript](https://www.rivescript.com)
+* [P5.js](https://p5js.org)
 
 ## Contributors
 
